@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Cloudinary</string>
+    <string name="message">Enter message to send</string>
+</resources>

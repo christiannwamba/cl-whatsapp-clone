@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="end">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent"
+        android:id="@+id/view_layout"
+        android:layout_margin="1dp"
+        android:background="@drawable/round_background">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/message_content"
+            android:maxLines="100"
+            android:text="@string/app_name"
+            android:textSize="10sp"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:textColor="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/time_stamp"/>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/image_sent"
+            android:contentDescription="@string/app_name"
+            android:visibility="visible"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:layout_above="@id/message_content"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/time_stamp"
+            android:layout_above="@id/message_content"
+            android:textStyle="italic"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

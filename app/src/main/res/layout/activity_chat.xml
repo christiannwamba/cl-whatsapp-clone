@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="i.am.eipeks.cloudinary.Chat">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/messages"
+        android:layout_above="@id/local_image"
+        android:divider="@android:color/transparent" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/local_image"
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/send_messages_layout"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/progress"
+        android:layout_toEndOf="@id/local_image"
+        android:layout_alignBottom="@id/local_image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/send_messages_layout"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:id="@+id/typed_message"
+            android:inputType="textMultiLine"
+            android:hint="@string/message"
+            android:background="@null"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@null"
+            android:id="@+id/load_image"
+            android:src="@drawable/upload_image_background"
+            android:contentDescription="@string/app_name"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@null"
+            android:id="@+id/send"
+            android:src="@drawable/send_message"
+            android:contentDescription="@string/app_name"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
